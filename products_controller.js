@@ -38,7 +38,7 @@ module.exports = {
         const dbInstance = req.app.get('db');
         const { params, query } = req;
 
-        dbInstance.update_product([ params.id, query.desc])
+        dbInstance.update_product([params.id, query.desc])
             .then(() => res.sendStatus(200))
             .catch(err => {
                 res.status(500).send({ errorMessage: "Sorry, this is not working out.. don't worry! Its not you. I have to work somethings out internally." });
